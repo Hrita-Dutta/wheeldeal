@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -5,6 +7,8 @@ const Register = () => {
   const [accountType, setAccountType] = useState("customer");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -29,21 +33,20 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
+      const res = await axios.post("http://localhost:8080/auth/register", {
         ...formData,
         accountType,
       });
       alert(res.data.message);
+      navigate("/login");
     } catch (err) {
       alert(err.response?.data?.message || "Registration failed");
     }
   };
 
   return (
-    // 🔒 FIX 1: lock overall height
     <div className="h-screen flex overflow-hidden">
       {/* ================= LEFT SECTION ================= */}
-      {/* 🔒 FIX 2: force left section to full height */}
       <div className="hidden lg:flex lg:w-1/2 h-full from-blue-900 via-blue-800 to-blue-900 bg-[#1E3A5F] text-white p-12 flex-col justify-between relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -145,7 +148,6 @@ const Register = () => {
       </div>
 
       {/* ================= RIGHT SECTION ================= */}
-      {/* 🔒 FIX 3: allow scrolling instead of resizing */}
       <div className="flex-1 flex items-center justify-center p-8 bg-gray-50 overflow-y-auto">
         <div className="w-full max-w-md">
           <div className="mb-8">

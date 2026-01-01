@@ -11,7 +11,7 @@ exports.register = async (req, res) => {
       const customer = await db.Customer.create({
         ...data,
         password: hashedPassword,
-        confirmPassword: hashedPassword,
+        // confirmPassword: hashedPassword,
       });
 
       return res.status(201).json({
@@ -24,7 +24,7 @@ exports.register = async (req, res) => {
       const owner = await db.VehicleOwner.create({
         ...data,
         password: hashedPassword,
-        confirmPassword: hashedPassword,
+        // confirmPassword: hashedPassword,
       });
 
       return res.status(201).json({
