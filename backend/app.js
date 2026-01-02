@@ -7,6 +7,7 @@ const authRoute = require("./routes/auth.route");
 // const sequelize = require("sequelize");
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -17,7 +18,7 @@ PORT = process.env.PORT || 8080;
 
 db.sequelize
   // .sync({ force: true })
-  .sync()
+  .sync({ alter: true })
   // .then(() => sessionStore.sync())
   .then(() => {
     console.log("Database Synced");
