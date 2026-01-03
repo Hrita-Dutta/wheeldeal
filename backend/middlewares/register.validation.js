@@ -18,8 +18,8 @@ exports.registerValidation = [
   body("phone").trim().notEmpty().withMessage("Phone number required"),
   body("password")
     .trim()
-    .isLength({ min: 8 })
-    .withMessage("Password required min 8 characters"),
+    .isLength({ min: 6 })
+    .withMessage("Password required min 6 characters"),
   body("accountType")
     .isIn(["customer", "owner"])
     .withMessage("Last name required"),
@@ -27,7 +27,15 @@ exports.registerValidation = [
     .trim()
     .if(body("accountType").equals("owner"))
     .notEmpty()
-    .withMessage("License required for owner"),
+    .withMessage("License required for owner")
+    .custom(async (value) => {
+      const user = await db.VehicleOwner.findOne({
+        where: { licenseNumber: value },
+      });
+      if (user) {
+        throw new Error("License already exists!");
+      }
+    }),
 
   body("address")
     .if(body("accountType").equals("owner"))

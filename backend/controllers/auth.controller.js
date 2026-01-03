@@ -3,6 +3,7 @@ const db = require("../models");
 
 exports.register = async (req, res) => {
   const { accountType, ...data } = req.body;
+  // console.log("bug here");
 
   try {
     const hashedPassword = await bcrypt.hash(data.password, 10);
