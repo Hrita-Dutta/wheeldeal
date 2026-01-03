@@ -331,7 +331,10 @@ const Register = () => {
               </button>
               <p className="text-center text-sm text-gray-600">
                 Already have an account?{" "}
-                <span className="text-orange-500 font-semibold cursor-pointer">
+                <span
+                  onClick={() => navigate("/login")}
+                  className="text-orange-500 font-semibold cursor-pointer hover:underline"
+                >
                   Login
                 </span>
               </p>
