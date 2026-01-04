@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
+  // const [rememberMe, setRememberMe] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,8 +20,24 @@ const Login = () => {
     }));
   };
 
-  const handleLogin = () => {
-    console.log("Login submitted:", { ...formData, rememberMe });
+  const handleLogin = async () => {
+    console.log("Login submitted:", { ...formData });
+    try {
+      const res = await axios.post("http://localhost:8080/auth/login", {
+        ...formData,
+      });
+
+      // SAVE TO LOCAL STORAGE
+      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("email", res.data.email);
+      localStorage.setItem("userId", res.data.userId);
+      localStorage.setItem("accountType", res.data.accountType);
+      alert(res.data.message || "LoggedIn Successful!");
+      // navigate("/");
+    } catch (err) {
+      console.log(err);
+      alert(err.response?.data?.message || "Login failed");
+    }
   };
 
   return (
@@ -212,7 +232,7 @@ const Login = () => {
 
             {/* Remember Me & Forgot Password */}
             <div className="flex items-center justify-between">
-              <label className="flex items-center gap-2 cursor-pointer">
+              {/* <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={rememberMe}
@@ -220,7 +240,7 @@ const Login = () => {
                   className="w-4 h-4 text-orange-500 border-gray-300 rounded focus:ring-orange-500"
                 />
                 <span className="text-sm text-gray-700">Remember me</span>
-              </label>
+              </label> */}
               <span className="text-sm text-orange-500 cursor-pointer hover:underline">
                 Forgot Password?
               </span>
@@ -262,7 +282,10 @@ const Login = () => {
             {/* Sign Up Link */}
             <div className="text-center text-sm text-gray-600 mt-6">
               Don't have an account?{" "}
-              <span className="text-orange-500 font-semibold cursor-pointer hover:underline">
+              <span
+                onClick={() => navigate("/register")}
+                className="text-orange-500 font-semibold cursor-pointer hover:underline"
+              >
                 Sign Up
               </span>
             </div>

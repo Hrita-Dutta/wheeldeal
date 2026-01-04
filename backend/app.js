@@ -14,8 +14,17 @@ app.use(express.json());
 // All routes here
 app.use("/auth", authRoute);
 
-PORT = process.env.PORT || 8080;
+// Error route
+app.use((error, req, res, next) => {
+  const status = error.statusCode || 500;
+  const message = error.message || "Something went wrong";
 
+  res.status(status).json({
+    message: message,
+  });
+});
+
+PORT = process.env.PORT || 8080;
 db.sequelize
   // .sync({ force: true })
   .sync({ alter: true })
