@@ -15,6 +15,7 @@ const Header = () => {
             <li>
               <NavLink
                 to="/"
+                end
                 className={({ isActive }) =>
                   isActive ? styles.activeLink : styles.navLink
                 }
@@ -64,12 +65,19 @@ const Header = () => {
             </li>
           </ul>
           <div className="flex gap-5">
-            <button className="border bg-[#FF6D3A] py-2 px-6 rounded-xl text-white font-bold hover:bg-white hover:text-[#FF6D3A] hover:border-[#FF6D3A] transition duration-300 ease-in-out">
-              <a href="/register">Book Now</a>
-            </button>
-            <button className="border border-[#1E3A5F] bg-transparent py-2 px-6 rounded-xl text-[#1E3A5F] font-bold hover:bg-[#1E3A5F] hover:text-white  transition duration-300 ease-in-out">
-              <a href="/login">Log In</a>
-            </button>
+            <NavLink
+              to="/register"
+              className="border bg-[#FF6D3A] py-2 px-6 rounded-xl text-white font-bold hover:bg-white hover:text-[#FF6D3A] hover:border-[#FF6D3A] transition duration-300 ease-in-out"
+            >
+              Book Now
+            </NavLink>
+
+            <NavLink
+              to="/login"
+              className="border border-[#1E3A5F] bg-transparent py-2 px-6 rounded-xl text-[#1E3A5F] font-bold hover:bg-[#1E3A5F] hover:text-white  transition duration-300 ease-in-out"
+            >
+              Log In
+            </NavLink>
           </div>
         </div>
       </nav>
