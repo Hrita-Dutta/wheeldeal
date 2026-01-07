@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className=" flex h-full ">
+      <section className=" flex h-full ">
         <div className="flex flex-col gap-10 p-30">
           <hr className="w-15 border-solid border-t-4 border-[#FF6D3A] rounded-2xl" />
           <h1 className=" text-7xl font-bold text-[#1E3A5F] italic leading-20">
@@ -27,10 +27,10 @@ const Home = () => {
             <img src={carImg} alt="" className=" bg-cover bg-no-repeat" />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Search Vechiles based on location date and type */}
-      <div className=" bg-[#1E3A5F] flex justify-center">
+      <section className=" bg-[#1E3A5F] flex justify-center">
         <div className=" py-8 w-fit">
           <div className="flex  bg-white rounded-2xl">
             <form action="" className="flex px-10 py-5 gap-5 items-center">
@@ -94,10 +94,10 @@ const Home = () => {
             </form>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Browse By Category */}
-      <div className="flex justify-center py-15">
+      <section className="flex justify-center py-15">
         <div className="w-295">
           <div className="pb-8 flex flex-col gap-3">
             <span className="text-[#FF6D3A] uppercase font-semibold italic">
@@ -127,10 +127,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* How it works */}
-      <div className="bg-[#F8FAFC] flex justify-center py-15 ">
+      <section className="bg-[#F8FAFC] flex justify-center py-15 ">
         <div className="w-295 flex flex-col gap-10">
           <div className="flex flex-col items-center gap-2">
             <span className="text-[#FF6D3A] uppercase font-semibold italic">
@@ -196,10 +196,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Feature Vehicles */}
-      <div className="flex justify-center py-10">
+      <section className="flex justify-center py-10">
         <div className="w-295">
           {/* Top Section */}
           <div className="flex justify-between items-center py-8">
@@ -313,10 +313,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Testimonials */}
-      <div className="bg-[#F8FAFC] flex flex-col items-center py-8">
+      <section className="bg-[#F8FAFC] flex flex-col items-center py-8">
         <div className="w-295">
           {/* Top Section */}
           <div className="text-center py-5">
@@ -398,10 +398,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Ready to start you journey */}
-      <div className="bg-[#1E3A5F]">
+      <section className="bg-[#1E3A5F]">
         <div className="flex flex-col items-center p-12 gap-3">
           <h2 className="text-white text-[40px] italic font-bold">
             Ready to Start Your Journey?{" "}
@@ -418,7 +418,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

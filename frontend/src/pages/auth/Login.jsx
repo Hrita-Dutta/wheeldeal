@@ -33,7 +33,7 @@ const Login = () => {
       localStorage.setItem("userId", res.data.userId);
       localStorage.setItem("accountType", res.data.accountType);
       alert(res.data.message || "LoggedIn Successful!");
-      // navigate("/");
+      navigate("/");
     } catch (err) {
       console.log(err);
       alert(err.response?.data?.message || "Login failed");

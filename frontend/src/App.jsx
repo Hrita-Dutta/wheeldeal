@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import AuthLayout from "./layouts/AuthLayout";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         {/* Main Layout */}
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="about" element={<AboutUs />} />
         </Route>
 
         {/* Auth Layout */}
