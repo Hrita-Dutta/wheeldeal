@@ -25,28 +25,28 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
       {/* Hero Section */}
-      <section className="bg-[#1E3A5F] text-white py-20 flex justify-center">
-        <div className="w-295  px-6 ">
+      <section className="bg-[#1E3A5F] text-white py-20 flex justify-center px-4">
+        <div className="w-full lg:w-295 px-6">
           <span className="font-bold text-[#FF6D3A] italic text-sm">
             GET IN TOUCH{" "}
           </span>
-          <h1 className="text-5xl font-bold mb-4 w-[36%] italic">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 w-full lg:w-[36%] italic">
             We'd Love to Hear From You{" "}
           </h1>
-          <p className=" text-[#94A3B8] max-w-3xl">
+          <p className="text-[#94A3B8] max-w-3xl">
             Have questions? We're here to help! Reach out to us anytime.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-10 flex justify-center">
-        <div className="w-295  px-6">
+      <section className="py-10 flex justify-center px-4">
+        <div className="w-full lg:w-295 px-6">
           <div className="">
             {/* Contact Information Cards */}
-            <div className="lg:col-span-1  flex justify-between items-baseline py-6">
+            <div className="lg:col-span-1 flex flex-col lg:flex-row justify-between items-baseline py-6 gap-6">
               {/* Phone Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow w-[25%]">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow w-full lg:w-[25%]">
                 <div className="flex gap-5 items-center">
                   <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4">
                     <span className="text-2xl">📞</span>
@@ -66,7 +66,7 @@ const ContactUs = () => {
                 </p>
               </div>
               {/* Email Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow w-[30%]">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow w-full lg:w-[30%]">
                 <div className="flex gap-5 items-center">
                   <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <span className="text-2xl">✉️</span>
@@ -87,7 +87,7 @@ const ContactUs = () => {
               </div>
 
               {/* Office Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow w-[30%]">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow w-full lg:w-[30%]">
                 <div className="flex gap-5 items-center">
                   <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <span className="text-2xl">📍</span>
@@ -119,7 +119,7 @@ const ContactUs = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name and Email Row */}
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label
                         htmlFor="name"
@@ -159,7 +159,7 @@ const ContactUs = () => {
                   </div>
 
                   {/* Phone and Subject Row */}
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label
                         htmlFor="phone"
@@ -240,7 +240,7 @@ const ContactUs = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-4">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-bold italic text-3xl text-[#1E3A5F] mb-4 text-center">
@@ -267,7 +267,7 @@ const ContactUs = () => {
               </details>
 
               {/* FAQ 2 */}
-              <details className="bg-[#F8FAFC]  rounded-xl p-6 border border-gray-200 group">
+              <details className="bg-[#F8FAFC] rounded-xl p-6 border border-gray-200 group">
                 <summary className="font-semibold text-[#1E3A5F] cursor-pointer list-none flex justify-between items-center">
                   What payment methods do you accept?
                   <span className="text-[#FF6D3A] group-open:rotate-180 transition-transform">
@@ -281,7 +281,7 @@ const ContactUs = () => {
               </details>
 
               {/* FAQ 3 */}
-              <details className="bg-[#F8FAFC]  rounded-xl p-6 border border-gray-200 group">
+              <details className="bg-[#F8FAFC] rounded-xl p-6 border border-gray-200 group">
                 <summary className="font-semibold text-[#1E3A5F] cursor-pointer list-none flex justify-between items-center">
                   Can I cancel my booking?
                   <span className="text-[#FF6D3A] group-open:rotate-180 transition-transform">
@@ -295,7 +295,7 @@ const ContactUs = () => {
               </details>
 
               {/* FAQ 4 */}
-              <details className="bg-[#F8FAFC]  rounded-xl p-6 border border-gray-200 group">
+              <details className="bg-[#F8FAFC] rounded-xl p-6 border border-gray-200 group">
                 <summary className="font-semibold text-[#1E3A5F] cursor-pointer list-none flex justify-between items-center">
                   How do I list my vehicle?
                   <span className="text-[#FF6D3A] group-open:rotate-180 transition-transform">
@@ -327,12 +327,12 @@ const ContactUs = () => {
 
       {/* Map Section (Placeholder) */}
       {/* Map Section */}
-      <section className="py-8 ">
+      <section className="py-8 px-4">
         <div className="flex flex-col items-center gap-5">
           <h3 className="font-bold italic text-3xl text-[#1E3A5F]">
             Find Us Here
           </h3>
-          <div className="w-295 border-2 border-[#E2E8F0] rounded-2xl">
+          <div className="w-full lg:w-295 border-2 border-[#E2E8F0] rounded-2xl">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0676609965287!2d87.69476107495565!3d26.663334676802573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef41f2b5f7f2c3%3A0xd5a7d7f98aaf07db!2sDamak%20Jaycees%20Chowk!5e0!3m2!1sen!2snp!4v1694500000000!5m2!1sen!2snp"
               width="100%"
@@ -349,11 +349,11 @@ const ContactUs = () => {
       </section>
 
       {/* Business Hours */}
-      <section className="py-16 bg-[#1E3A5F]">
+      <section className="py-16 bg-[#1E3A5F] px-4">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-8 italic">Business Hours</h2>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div className="bg-white rounded-xl p-6 text-[#64748B]">
                 <h3 className="font-semibold text-xl mb-4 text-[#FF6D3A]">
                   Customer Support
@@ -381,7 +381,7 @@ const ContactUs = () => {
                 <p className="mb-2">
                   Sunday: <span className="font-bold">9:00 AM - 5:00 PM</span>
                 </p>
-                <p className="text-sm  mt-3">*Hours may vary by owner</p>
+                <p className="text-sm mt-3">*Hours may vary by owner</p>
               </div>
             </div>
           </div>
@@ -389,8 +389,8 @@ const ContactUs = () => {
       </section>
 
       {/* Social Media */}
-      <section className="flex justify-center py-10">
-        <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 w-295">
+      <section className="flex justify-center py-10 px-4">
+        <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 w-full lg:w-295">
           <h3 className="text-3xl font-bold text-blue-900 mb-4 italic">
             Follow Us
           </h3>

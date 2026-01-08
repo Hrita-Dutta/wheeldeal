@@ -4,16 +4,16 @@ const AboutUs = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-[#1E3A5F] flex justify-center">
-        <div className=" text-white py-20 w-295">
-          <div className="container  px-6 w-[50%]">
+      <section className="bg-[#1E3A5F] flex justify-center px-4">
+        <div className="text-white py-20 w-full lg:w-295">
+          <div className="container px-6 w-full lg:w-[50%]">
             <span className="font-bold text-[#FF6D3A] italic">
               About WheelDeal
             </span>
-            <h1 className="text-5xl font-bold mb-4 italic">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4 italic">
               Your Trusted Vehicle Rental Partner in Nepal
             </h1>
-            <p className=" text-[#94A3B8] max-w-3xl ">
+            <p className="text-[#94A3B8] max-w-3xl">
               Connecting travelers with verified vehicle owners since 2020.
               Making every journey safe, reliable, and memorable.
             </p>
@@ -22,14 +22,14 @@ const AboutUs = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 w-295">
+      <section className="py-16 w-full lg:w-295 px-4 mx-auto">
         <div>
           <img src="" alt="" />
         </div>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <span className="font-bold text-[#FF6D3A] italic">My Story</span>
-            <h2 className="text-3xl font-bold text-[#1E3A5F] mb-6  italic">
+            <h2 className="text-3xl font-bold text-[#1E3A5F] mb-6 italic">
               How It All Started
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4 text-lg">
@@ -42,7 +42,7 @@ const AboutUs = () => {
             <p className="text-gray-700 leading-relaxed text-lg">
               This project allowed me to explore real-world problems and build a
               platform that lets people rent vehicles safely and conveniently.
-              While it’s still a student project, I hope it can make vehicle
+              While it's still a student project, I hope it can make vehicle
               rental easier and more trustworthy for everyone.
             </p>
           </div>
@@ -50,9 +50,9 @@ const AboutUs = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 px-4">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Mission */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
@@ -82,7 +82,7 @@ const AboutUs = () => {
                 As a student project, I hope WheelDeal can grow into a helpful
                 platform for people in Nepal to rent vehicles easily and safely.
                 My aim is to build something trustworthy and simple, so every
-                journey can be enjoyable and stress free even if it’s just a
+                journey can be enjoyable and stress free even if it's just a
                 small step toward something bigger.
               </p>
             </div>
@@ -91,12 +91,12 @@ const AboutUs = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-4">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-[#1E3A5F] mb-12 text-center">
             Our Core Values
           </h2>
-          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Trust */}
             <div className="text-center">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -152,8 +152,8 @@ const AboutUs = () => {
       </section>
 
       {/* How It Works */}
-      <section className="bg-[#F8FAFC] flex justify-center py-15 ">
-        <div className="w-295 flex flex-col gap-10">
+      <section className="bg-[#F8FAFC] flex justify-center py-15 px-4">
+        <div className="w-full lg:w-295 flex flex-col gap-10">
           <div className="flex flex-col items-center gap-2">
             <span className="text-[#FF6D3A] uppercase font-semibold italic">
               Simple Process
@@ -166,10 +166,10 @@ const AboutUs = () => {
             </p>
           </div>
           {/* Steps Div */}
-          {/* Step 1 */}
-          <div className="flex items-center">
-            <div className="border border-solid border-[#E2E8F0] w-fit bg-white py-5 px-18 rounded-2xl">
-              <div className="flex flex-col items-center w-50 gap-3">
+          <div className="flex flex-col lg:flex-row items-center gap-6">
+            {/* Step 1 */}
+            <div className="border border-solid border-[#E2E8F0] w-full lg:w-fit bg-white py-5 px-8 lg:px-18 rounded-2xl">
+              <div className="flex flex-col items-center w-full lg:w-50 gap-3">
                 <span className="bg-[#1E3A5F] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   1
                 </span>
@@ -183,11 +183,11 @@ const AboutUs = () => {
             </div>
 
             {/* border dashed */}
-            <div className=" border-dashed border-t-3 border-[#E2E8F0] w-15"></div>
+            <div className="hidden lg:block border-dashed border-t-3 border-[#E2E8F0] w-15"></div>
 
             {/* Step 2 */}
-            <div className="border border-solid border-[#E2E8F0] w-fit bg-white py-5 px-18 rounded-2xl">
-              <div className="flex flex-col items-center w-50 gap-3">
+            <div className="border border-solid border-[#E2E8F0] w-full lg:w-fit bg-white py-5 px-8 lg:px-18 rounded-2xl">
+              <div className="flex flex-col items-center w-full lg:w-50 gap-3">
                 <span className="bg-[#FF6D3A] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   2
                 </span>
@@ -200,11 +200,11 @@ const AboutUs = () => {
               </div>
             </div>
             {/* border dashed */}
-            <div className=" border-dashed border-t-3 border-[#E2E8F0] w-15"></div>
+            <div className="hidden lg:block border-dashed border-t-3 border-[#E2E8F0] w-15"></div>
 
             {/* Step 3 */}
-            <div className="border border-solid border-[#E2E8F0] w-fit bg-white py-5 px-18 rounded-2xl">
-              <div className="flex flex-col items-center w-50 gap-3">
+            <div className="border border-solid border-[#E2E8F0] w-full lg:w-fit bg-white py-5 px-8 lg:px-18 rounded-2xl">
+              <div className="flex flex-col items-center w-full lg:w-50 gap-3">
                 <span className="bg-[#0EA5E9] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   3
                 </span>
@@ -221,8 +221,8 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16">
-        <div className="w-295 mx-auto px-6">
+      <section className="py-16 px-4">
+        <div className="w-full lg:w-295 mx-auto px-6">
           <h2 className="text-4xl font-bold text-[#1E3A5F] mb-4 text-center italic">
             Meet Team
           </h2>
@@ -232,7 +232,7 @@ const AboutUs = () => {
           </p>
           <div className="flex justify-center">
             {/* Team Member 1 */}
-            <div className="bg-[#F8FAFC] rounded-xl p-6 text-center shadow-md w-[25%]">
+            <div className="bg-[#F8FAFC] rounded-xl p-6 text-center shadow-md w-full lg:w-[25%]">
               <div className="w-24 h-24 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl font-bold text-white">HD</span>
               </div>
@@ -287,19 +287,19 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-[#1E3A5F]">
+      <section className="bg-[#1E3A5F] px-4">
         <div className="flex flex-col items-center p-12 gap-3">
-          <h2 className="text-white text-[40px] italic font-bold">
+          <h2 className="text-white text-3xl lg:text-[40px] italic font-bold text-center">
             Ready to Start Your Journey?{" "}
           </h2>
-          <p className="text-[18px] text-[#94A3B8] font-light">
+          <p className="text-base lg:text-[18px] text-[#94A3B8] font-light text-center">
             Join 10,000+ satisfied customers. Book your perfect ride today.{" "}
           </p>
-          <div className="flex gap-6 mt-3">
-            <button className="border-2 border-transparent bg-[#FF6D3A] py-4 px-10 text-white font-bold rounded-xl hover:bg-transparent hover:border-white transition duration-300 ease-in-out">
+          <div className="flex flex-col lg:flex-row gap-6 mt-3 w-full lg:w-auto">
+            <button className="border-2 border-transparent bg-[#FF6D3A] py-4 px-10 text-white font-bold rounded-xl hover:bg-transparent hover:border-white transition duration-300 ease-in-out w-full lg:w-auto">
               Browse Vechicles
             </button>
-            <button className="border-2 border-white bg-transparent py-4 px-10 text-white font-bold rounded-xl hover:bg-[#FF6D3A] hover:border-transparent transition duration-300 ease-in-out">
+            <button className="border-2 border-white bg-transparent py-4 px-10 text-white font-bold rounded-xl hover:bg-[#FF6D3A] hover:border-transparent transition duration-300 ease-in-out w-full lg:w-auto">
               List Your Vehicle
             </button>
           </div>

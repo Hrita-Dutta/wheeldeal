@@ -62,7 +62,9 @@ const Footer = () => {
                   <NavLink>FAQ</NavLink>
                 </li>
                 <li className="hover:underline">
-                  <NavLink>Contact Us</NavLink>
+                  <NavLink to="/contact" onClick={scrollToTop}>
+                    Contact Us
+                  </NavLink>
                 </li>
                 <li className="hover:underline">
                   <NavLink>Terms</NavLink>
