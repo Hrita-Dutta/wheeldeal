@@ -7,6 +7,7 @@ import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
+import FAQ from "./pages/FAQ";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route path="faq" element={<FAQ />} />
         </Route>
 
         {/* Auth Layout */}

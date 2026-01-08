@@ -59,7 +59,9 @@ const Footer = () => {
               <ul className="flex flex-col gap-2">
                 <li className="font-bold italic text-[#1E3A5F]">Support</li>
                 <li className="hover:underline">
-                  <NavLink>FAQ</NavLink>
+                  <NavLink to="/faq" onClick={scrollToTop}>
+                    FAQ
+                  </NavLink>
                 </li>
                 <li className="hover:underline">
                   <NavLink to="/contact" onClick={scrollToTop}>
