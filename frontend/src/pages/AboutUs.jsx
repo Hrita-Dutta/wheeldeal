@@ -21,12 +21,14 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-16 w-full lg:w-295 px-4 mx-auto">
-        <div>
-          <img src="" alt="" />
+      {/* My Story */}
+      <section className="py-16 w-full lg:w-295 px-4 mx-auto flex gap-5">
+        <div className="w-[95%] ">
+          <div className="border h-full rounded-xl">
+            <img src="" alt="Image is to be placed" />
+          </div>
         </div>
-        <div className="container mx-auto px-6">
+        <div className="w-295 mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <span className="font-bold text-[#FF6D3A] italic">My Story</span>
             <h2 className="text-3xl font-bold text-[#1E3A5F] mb-6 italic">
