@@ -27,10 +27,10 @@ const ContactUs = () => {
       {/* Hero Section */}
       <section className="bg-[#1E3A5F] text-white py-20 flex justify-center px-4">
         <div className="w-full lg:w-295 px-6">
-          <span className="font-bold text-[#FF6D3A] italic text-sm">
+          <span className="font-bold text-[#FF6D3A]  text-sm">
             GET IN TOUCH{" "}
           </span>
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 w-full lg:w-[36%] italic">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 w-full lg:w-[36%] ">
             We'd Love to Hear From You{" "}
           </h1>
           <p className="text-[#94A3B8] max-w-3xl">
@@ -55,7 +55,7 @@ const ContactUs = () => {
                     <span className="text-[#64748B]">Call Us</span>
                     <a
                       href="tel:+9779800000000"
-                      className="text-[#1E3A5F] font-semibold hover:text-[#305c96] italic"
+                      className="text-[#1E3A5F] font-semibold hover:text-[#305c96] "
                     >
                       +977-9800000000
                     </a>
@@ -75,7 +75,7 @@ const ContactUs = () => {
                     <span className="text-[#64748B]">Email Us</span>
                     <a
                       href="mailto:support@wheeldeal.com"
-                      className="text-[#1E3A5F] font-semibold hover:text-[#305c96] italic"
+                      className="text-[#1E3A5F] font-semibold hover:text-[#305c96] "
                     >
                       support@wheeldeal.com
                     </a>
@@ -94,7 +94,7 @@ const ContactUs = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-[#64748B]">Visit Us</span>
-                    <p className="text-[#1E3A5F] font-semibold hover:text-[#305c96] italic">
+                    <p className="text-[#1E3A5F] font-semibold hover:text-[#305c96] ">
                       Baneshwor, Kathmandu
                     </p>
                   </div>
@@ -106,10 +106,10 @@ const ContactUs = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                <span className="font-bold italic text-[#FF6D3A]">
+                <span className="font-bold  text-[#FF6D3A]">
                   Send us a Message
                 </span>
-                <h2 className="text-3xl font-bold text-[#1E3A5F] mb-2 italic">
+                <h2 className="text-3xl font-bold text-[#1E3A5F] mb-2 ">
                   Get in Touch
                 </h2>
                 <p className="text-[#64748B] mb-8">
@@ -243,7 +243,7 @@ const ContactUs = () => {
       <section className="py-16 bg-white px-4">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-bold italic text-3xl text-[#1E3A5F] mb-4 text-center">
+            <h2 className="font-bold  text-3xl text-[#1E3A5F] mb-4 text-center">
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600 text-center mb-12">
@@ -329,9 +329,7 @@ const ContactUs = () => {
       {/* Map Section */}
       <section className="py-8 px-4">
         <div className="flex flex-col items-center gap-5">
-          <h3 className="font-bold italic text-3xl text-[#1E3A5F]">
-            Find Us Here
-          </h3>
+          <h3 className="font-bold  text-3xl text-[#1E3A5F]">Find Us Here</h3>
           <div className="w-full lg:w-295 border-2 border-[#E2E8F0] rounded-2xl">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0676609965287!2d87.69476107495565!3d26.663334676802573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef41f2b5f7f2c3%3A0xd5a7d7f98aaf07db!2sDamak%20Jaycees%20Chowk!5e0!3m2!1sen!2snp!4v1694500000000!5m2!1sen!2snp"
@@ -352,7 +350,7 @@ const ContactUs = () => {
       <section className="py-16 bg-[#1E3A5F] px-4">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl font-bold mb-8 italic">Business Hours</h2>
+            <h2 className="text-3xl font-bold mb-8 ">Business Hours</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
               <div className="bg-white rounded-xl p-6 text-[#64748B]">
                 <h3 className="font-semibold text-xl mb-4 text-[#FF6D3A]">
@@ -391,9 +389,7 @@ const ContactUs = () => {
       {/* Social Media */}
       <section className="flex justify-center py-10 px-4">
         <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 w-full lg:w-295">
-          <h3 className="text-3xl font-bold text-blue-900 mb-4 italic">
-            Follow Us
-          </h3>
+          <h3 className="text-3xl font-bold text-blue-900 mb-4 ">Follow Us</h3>
           <div className="flex gap-3">
             <a
               href="#"

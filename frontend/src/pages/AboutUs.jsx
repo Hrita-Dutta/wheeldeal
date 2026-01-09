@@ -7,10 +7,8 @@ const AboutUs = () => {
       <section className="bg-[#1E3A5F] flex justify-center px-4">
         <div className="text-white py-20 w-full lg:w-295">
           <div className="container px-6 w-full lg:w-[50%]">
-            <span className="font-bold text-[#FF6D3A] italic">
-              About WheelDeal
-            </span>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4 italic">
+            <span className="font-bold text-[#FF6D3A] ">About WheelDeal</span>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-4 ">
               Your Trusted Vehicle Rental Partner in Nepal
             </h1>
             <p className="text-[#94A3B8] max-w-3xl">
@@ -30,8 +28,8 @@ const AboutUs = () => {
         </div>
         <div className="w-295 mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <span className="font-bold text-[#FF6D3A] italic">My Story</span>
-            <h2 className="text-3xl font-bold text-[#1E3A5F] mb-6 italic">
+            <span className="font-bold text-[#FF6D3A] ">My Story</span>
+            <h2 className="text-3xl font-bold text-[#1E3A5F] mb-6 ">
               How It All Started
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4 text-lg">
@@ -157,12 +155,10 @@ const AboutUs = () => {
       <section className="bg-[#F8FAFC] flex justify-center py-15 px-4">
         <div className="w-full lg:w-295 flex flex-col gap-10">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-[#FF6D3A] uppercase font-semibold italic">
+            <span className="text-[#FF6D3A] uppercase font-semibold ">
               Simple Process
             </span>
-            <h2 className="text-[#1E3A5F] text-4xl italic font-bold">
-              How It Works
-            </h2>
+            <h2 className="text-[#1E3A5F] text-4xl  font-bold">How It Works</h2>
             <p className="text-[#64748B]">
               Get your perfect vehicle in just 3 easy steps{" "}
             </p>
@@ -175,7 +171,7 @@ const AboutUs = () => {
                 <span className="bg-[#1E3A5F] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   1
                 </span>
-                <span className="text-[#1E3A5F] text-xl italic font-bold">
+                <span className="text-[#1E3A5F] text-xl  font-bold">
                   Search
                 </span>
                 <p className="text-[#64748B] text-center">
@@ -193,9 +189,7 @@ const AboutUs = () => {
                 <span className="bg-[#FF6D3A] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   2
                 </span>
-                <span className="text-[#1E3A5F] text-xl italic font-bold">
-                  Book
-                </span>
+                <span className="text-[#1E3A5F] text-xl  font-bold">Book</span>
                 <p className="text-[#64748B] text-center">
                   Select dates & complete secure payment
                 </p>
@@ -210,9 +204,7 @@ const AboutUs = () => {
                 <span className="bg-[#0EA5E9] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   3
                 </span>
-                <span className="text-[#1E3A5F] text-xl italic font-bold">
-                  Drive
-                </span>
+                <span className="text-[#1E3A5F] text-xl  font-bold">Drive</span>
                 <p className="text-[#64748B] text-center">
                   Pick up your vehicle and enjoy the journey!
                 </p>
@@ -225,7 +217,7 @@ const AboutUs = () => {
       {/* Team Section */}
       <section className="py-16 px-4">
         <div className="w-full lg:w-295 mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#1E3A5F] mb-4 text-center italic">
+          <h2 className="text-4xl font-bold text-[#1E3A5F] mb-4 text-center ">
             Meet Team
           </h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
@@ -291,7 +283,7 @@ const AboutUs = () => {
       {/* Call to Action */}
       <section className="bg-[#1E3A5F] px-4">
         <div className="flex flex-col items-center p-12 gap-3">
-          <h2 className="text-white text-3xl lg:text-[40px] italic font-bold text-center">
+          <h2 className="text-white text-3xl lg:text-[40px]  font-bold text-center">
             Ready to Start Your Journey?{" "}
           </h2>
           <p className="text-base lg:text-[18px] text-[#94A3B8] font-light text-center">

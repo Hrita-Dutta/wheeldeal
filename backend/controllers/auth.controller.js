@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const db = require("../models");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 exports.register = async (req, res) => {
   const { accountType, ...data } = req.body;
@@ -45,7 +46,7 @@ exports.register = async (req, res) => {
   }
 };
 
-exports.login = (req, res, next) => {
+exports.login = async (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
   let loadedUser;
@@ -83,7 +84,7 @@ exports.login = (req, res, next) => {
           userId: loadedUser.id.toString(),
           accountType: accountType,
         },
-        "secret",
+        process.env.SECRET,
         { expiresIn: "1h" }
       );
       res.status(200).json({

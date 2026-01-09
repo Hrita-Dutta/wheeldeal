@@ -9,7 +9,7 @@ const Home = () => {
       <section className="flex flex-col lg:flex-row h-full">
         <div className="flex flex-col gap-6 lg:gap-10 p-6 lg:p-30">
           <hr className="w-15 border-solid border-t-4 border-[#FF6D3A] rounded-2xl" />
-          <h1 className="text-4xl lg:text-7xl font-bold text-[#1E3A5F] italic leading-tight lg:leading-20">
+          <h1 className="text-4xl lg:text-7xl font-bold text-[#1E3A5F]  leading-tight lg:leading-20 italic">
             Rent Your Perfect <br />{" "}
             <span className="text-[#FF6D3A]">Ride</span>
           </h1>
@@ -101,11 +101,11 @@ const Home = () => {
       {/* Browse By Category */}
       <section className="flex justify-center py-15 px-4">
         <div className="w-full lg:w-295">
-          <div className="pb-8 flex flex-col gap-3">
-            <span className="text-[#FF6D3A] uppercase font-semibold italic">
+          <div className="pb-8 flex flex-col gap-2">
+            <span className="text-[#FF6D3A] uppercase font-semibold ">
               Explore
             </span>
-            <h2 className="text-[#1E3A5F] text-4xl italic font-bold">
+            <h2 className="text-[#1E3A5F] text-4xl  font-bold">
               Browse by Category
             </h2>
             <p className="text-[#64748B]">
@@ -121,9 +121,9 @@ const Home = () => {
                 alt=""
                 className="bg-cover bg-no-repeat rounded-2xl"
               />
-              <span className="text-lg font-bold italic">Category</span>
+              <span className="text-lg font-bold ">Category</span>
               <span className="text-[#94A3B8]">40 vehicles</span>
-              <button className="w-fit bg-[#fad9cd] text-[#FF6D3A] font-semibold italic px-5 py-2 rounded-lg hover:text-[#fad9cd] hover:bg-[#FF5D3A] transition duration-300 ease-in-out">
+              <button className="w-fit bg-[#fad9cd] text-[#FF6D3A] font-semibold  px-5 py-2 rounded-lg hover:text-[#fad9cd] hover:bg-[#FF5D3A] transition duration-300 ease-in-out">
                 Explore
               </button>
             </div>
@@ -135,12 +135,10 @@ const Home = () => {
       <section className="bg-[#F8FAFC] flex justify-center py-15 px-4">
         <div className="w-full lg:w-295 flex flex-col gap-10">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-[#FF6D3A] uppercase font-semibold italic">
+            <span className="text-[#FF6D3A] uppercase font-semibold ">
               Simple Process
             </span>
-            <h2 className="text-[#1E3A5F] text-4xl italic font-bold">
-              How It Works
-            </h2>
+            <h2 className="text-[#1E3A5F] text-4xl font-bold">How It Works</h2>
             <p className="text-[#64748B]">
               Get your perfect vehicle in just 3 easy steps{" "}
             </p>
@@ -153,7 +151,7 @@ const Home = () => {
                 <span className="bg-[#1E3A5F] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   1
                 </span>
-                <span className="text-[#1E3A5F] text-xl italic font-bold">
+                <span className="text-[#1E3A5F] text-xl  font-bold">
                   Search
                 </span>
                 <p className="text-[#64748B] text-center">
@@ -171,9 +169,7 @@ const Home = () => {
                 <span className="bg-[#FF6D3A] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   2
                 </span>
-                <span className="text-[#1E3A5F] text-xl italic font-bold">
-                  Book
-                </span>
+                <span className="text-[#1E3A5F] text-xl  font-bold">Book</span>
                 <p className="text-[#64748B] text-center">
                   Select dates & complete secure payment
                 </p>
@@ -188,9 +184,7 @@ const Home = () => {
                 <span className="bg-[#0EA5E9] text-white rounded-[100%] px-7 py-5 w-fit text-xl font-bold">
                   3
                 </span>
-                <span className="text-[#1E3A5F] text-xl italic font-bold">
-                  Drive
-                </span>
+                <span className="text-[#1E3A5F] text-xl  font-bold">Drive</span>
                 <p className="text-[#64748B] text-center">
                   Pick up your vehicle and enjoy the journey!
                 </p>
@@ -207,17 +201,17 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-8 gap-4">
             <div>
               <div className="pb-8 flex flex-col gap-3">
-                <span className="text-[#FF6D3A] uppercase font-semibold italic">
+                <span className="text-[#FF6D3A] uppercase font-semibold ">
                   Top Picks
                 </span>
-                <h2 className="text-[#1E3A5F] text-4xl italic font-bold">
+                <h2 className="text-[#1E3A5F] text-4xl  font-bold">
                   Featured Vechicles
                 </h2>
               </div>
             </div>
             {/* View all button */}
             <div>
-              <button className="border-2 border-solid border-[#1E3A5F] bg-transparent font-semibold text-[#1E3A5F] hover:bg-[#1E3A5F] hover:text-white transition duration-300 ease-in-out py-3 px-7 rounded-xl italic">
+              <button className="border-2 border-solid border-[#1E3A5F] bg-transparent font-semibold text-[#1E3A5F] hover:bg-[#1E3A5F] hover:text-white transition duration-300 ease-in-out py-3 px-7 rounded-xl ">
                 View All
               </button>
             </div>
@@ -232,17 +226,17 @@ const Home = () => {
                 className="border rounded-2xl"
               />
               <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold italic text-xl text-[#1E3A5F]">
+                <span className="font-bold  text-xl text-[#1E3A5F]">
                   Toyota Land Cruiser
                 </span>
                 <p className="text-sm text-[#94A3B8]">2022 Model</p>
                 <span className="text-[#1E3A5F]">Rating</span>
                 <hr className="border-[#E2E8F0]" />
-                <span className="italic text-2xl font-bold text-[#1E3A5F]">
+                <span className=" text-2xl font-bold text-[#1E3A5F]">
                   NPR Price
                 </span>
               </div>
-              <button className="border bg-[#1E3A5F] italic font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
+              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
                 View Details
               </button>
             </div>
@@ -255,17 +249,17 @@ const Home = () => {
                 className="border rounded-2xl"
               />
               <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold italic text-xl text-[#1E3A5F]">
+                <span className="font-bold  text-xl text-[#1E3A5F]">
                   Toyota Land Cruiser
                 </span>
                 <p className="text-sm text-[#94A3B8]">2022 Model</p>
                 <span className="text-[#1E3A5F]">Rating</span>
                 <hr className="border-[#E2E8F0]" />
-                <span className="italic text-2xl font-bold text-[#1E3A5F]">
+                <span className=" text-2xl font-bold text-[#1E3A5F]">
                   NPR Price
                 </span>
               </div>
-              <button className="border bg-[#1E3A5F] italic font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
+              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
                 View Details
               </button>
             </div>
@@ -277,17 +271,17 @@ const Home = () => {
                 className="border rounded-2xl"
               />
               <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold italic text-xl text-[#1E3A5F]">
+                <span className="font-bold  text-xl text-[#1E3A5F]">
                   Toyota Land Cruiser
                 </span>
                 <p className="text-sm text-[#94A3B8]">2022 Model</p>
                 <span className="text-[#1E3A5F]">Rating</span>
                 <hr className="border-[#E2E8F0]" />
-                <span className="italic text-2xl font-bold text-[#1E3A5F]">
+                <span className=" text-2xl font-bold text-[#1E3A5F]">
                   NPR Price
                 </span>
               </div>
-              <button className="border bg-[#1E3A5F] italic font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
+              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
                 View Details
               </button>
             </div>
@@ -299,17 +293,17 @@ const Home = () => {
                 className="border rounded-2xl"
               />
               <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold italic text-xl text-[#1E3A5F]">
+                <span className="font-bold  text-xl text-[#1E3A5F]">
                   Toyota Land Cruiser
                 </span>
                 <p className="text-sm text-[#94A3B8]">2022 Model</p>
                 <span className="text-[#1E3A5F]">Rating</span>
                 <hr className="border-[#E2E8F0]" />
-                <span className="italic text-2xl font-bold text-[#1E3A5F]">
+                <span className=" text-2xl font-bold text-[#1E3A5F]">
                   NPR Price
                 </span>
               </div>
-              <button className="border bg-[#1E3A5F] italic font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
+              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
                 View Details
               </button>
             </div>
@@ -322,10 +316,10 @@ const Home = () => {
         <div className="w-full lg:w-295">
           {/* Top Section */}
           <div className="text-center py-5">
-            <span className="text-sm font-bold uppercase text-[#FF6D3A] italic">
+            <span className="text-sm font-bold uppercase text-[#FF6D3A] ">
               Testimonials
             </span>
-            <h2 className="text-4xl italic font-bold text-[#1E3A5F] pb-8">
+            <h2 className="text-4xl  font-bold text-[#1E3A5F] pb-8">
               What customers Say
             </h2>
           </div>
@@ -344,7 +338,7 @@ const Home = () => {
                     Logo
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-sm font-bold italic text-[#1E3A5F]">
+                    <span className="text-sm font-bold  text-[#1E3A5F]">
                       Hari Bahadur
                     </span>
                     <span className="text-xs text-[#94A3B8]">Kathmandu</span>
@@ -367,7 +361,7 @@ const Home = () => {
                     Logo
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-sm font-bold italic text-[#1E3A5F]">
+                    <span className="text-sm font-bold  text-[#1E3A5F]">
                       Hari Bahadur
                     </span>
                     <span className="text-xs text-[#94A3B8]">Kathmandu</span>
@@ -389,7 +383,7 @@ const Home = () => {
                     Logo
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-sm font-bold italic text-[#1E3A5F]">
+                    <span className="text-sm font-bold  text-[#1E3A5F]">
                       Hari Bahadur
                     </span>
                     <span className="text-xs text-[#94A3B8]">Kathmandu</span>
@@ -405,7 +399,7 @@ const Home = () => {
       {/* Ready to start you journey */}
       <section className="bg-[#1E3A5F]">
         <div className="flex flex-col items-center p-12 gap-3">
-          <h2 className="text-white text-3xl lg:text-[40px] italic font-bold text-center">
+          <h2 className="text-white text-3xl lg:text-[40px]  font-bold text-center">
             Ready to Start Your Journey?{" "}
           </h2>
           <p className="text-base lg:text-[18px] text-[#94A3B8] font-light text-center">

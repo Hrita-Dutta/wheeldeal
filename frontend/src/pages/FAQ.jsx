@@ -160,18 +160,18 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-6 text-center">
+      <section className="bg-[#1E3A5F] text-white py-20 flex justify-center">
+        <div className="w-295  px-6 ">
           <h1 className="text-5xl font-bold mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+          <p className="text-lg text-[#94A3B8] max-w-3xl ">
             Find quick answers to common questions about WheelDeal
           </p>
         </div>
       </section>
       {/* Search Bar */}
-      <section className="py-8 bg-white shadow-sm">
+      {/* <section className="py-8 bg-white shadow-sm">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <div className="relative">
@@ -183,7 +183,7 @@ const FAQ = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* FAQ Categories */}
       <section className="py-16">
         <div className="container mx-auto px-6">
@@ -194,7 +194,7 @@ const FAQ = () => {
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-2xl">❓</span>
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900">
+                <h2 className="text-3xl font-bold text-[#1E3A5F]">
                   General Questions
                 </h2>
               </div>
@@ -208,11 +208,11 @@ const FAQ = () => {
                       onClick={() => toggleFAQ(`general-${index}`)}
                       className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-semibold text-blue-900 text-lg pr-4">
+                      <span className="font-semibold text-[#1E3A5F] text-lg pr-4">
                         {faq.question}
                       </span>
                       <span
-                        className={`text-orange-500 text-xl font-bold transition-transform ${
+                        className={`text-[#FF6D3A] text-xl font-bold transition-transform ${
                           openIndex === `general-${index}` ? "rotate-180" : ""
                         }`}
                       >
@@ -235,7 +235,7 @@ const FAQ = () => {
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-2xl">📅</span>
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900">
+                <h2 className="text-3xl font-bold text-[#1E3A5F]">
                   Booking & Rentals
                 </h2>
               </div>
@@ -249,11 +249,11 @@ const FAQ = () => {
                       onClick={() => toggleFAQ(`booking-${index}`)}
                       className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-semibold text-blue-900 text-lg pr-4">
+                      <span className="font-semibold text-[#1E3A5F] text-lg pr-4">
                         {faq.question}
                       </span>
                       <span
-                        className={`text-orange-500 text-xl font-bold transition-transform ${
+                        className={`text-[#FF6D3A] text-xl font-bold transition-transform ${
                           openIndex === `booking-${index}` ? "rotate-180" : ""
                         }`}
                       >
@@ -276,7 +276,7 @@ const FAQ = () => {
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-2xl">💳</span>
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900">
+                <h2 className="text-3xl font-bold text-[#1E3A5F]">
                   Payment & Pricing
                 </h2>
               </div>
@@ -290,11 +290,11 @@ const FAQ = () => {
                       onClick={() => toggleFAQ(`payment-${index}`)}
                       className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-semibold text-blue-900 text-lg pr-4">
+                      <span className="font-semibold text-[#1E3A5F] text-lg pr-4">
                         {faq.question}
                       </span>
                       <span
-                        className={`text-orange-500 text-xl font-bold transition-transform ${
+                        className={`text-[#FF6D3A] text-xl font-bold transition-transform ${
                           openIndex === `payment-${index}` ? "rotate-180" : ""
                         }`}
                       >
@@ -317,7 +317,7 @@ const FAQ = () => {
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-2xl">🚫</span>
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900">
+                <h2 className="text-3xl font-bold text-[#1E3A5F]">
                   Cancellation & Refunds
                 </h2>
               </div>
@@ -331,11 +331,11 @@ const FAQ = () => {
                       onClick={() => toggleFAQ(`cancellation-${index}`)}
                       className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-semibold text-blue-900 text-lg pr-4">
+                      <span className="font-semibold text-[#1E3A5F] text-lg pr-4">
                         {faq.question}
                       </span>
                       <span
-                        className={`text-orange-500 text-xl font-bold transition-transform ${
+                        className={`text-[#FF6D3A] text-xl font-bold transition-transform ${
                           openIndex === `cancellation-${index}`
                             ? "rotate-180"
                             : ""
@@ -360,7 +360,7 @@ const FAQ = () => {
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-2xl">🚗</span>
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900">
+                <h2 className="text-3xl font-bold text-[#1E3A5F]">
                   For Vehicle Owners
                 </h2>
               </div>
@@ -374,11 +374,11 @@ const FAQ = () => {
                       onClick={() => toggleFAQ(`owners-${index}`)}
                       className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-semibold text-blue-900 text-lg pr-4">
+                      <span className="font-semibold text-[#1E3A5F] text-lg pr-4">
                         {faq.question}
                       </span>
                       <span
-                        className={`text-orange-500 text-xl font-bold transition-transform ${
+                        className={`text-[#FF6D3A] text-xl font-bold transition-transform ${
                           openIndex === `owners-${index}` ? "rotate-180" : ""
                         }`}
                       >
@@ -401,7 +401,7 @@ const FAQ = () => {
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
                   <span className="text-2xl">💬</span>
                 </div>
-                <h2 className="text-3xl font-bold text-blue-900">
+                <h2 className="text-3xl font-bold text-[#1E3A5F]">
                   Support & Help
                 </h2>
               </div>
@@ -415,11 +415,11 @@ const FAQ = () => {
                       onClick={() => toggleFAQ(`support-${index}`)}
                       className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-semibold text-blue-900 text-lg pr-4">
+                      <span className="font-semibold text-[#1E3A5F] text-lg pr-4">
                         {faq.question}
                       </span>
                       <span
-                        className={`text-orange-500 text-xl font-bold transition-transform ${
+                        className={`text-[#FF6D3A] text-xl font-bold transition-transform ${
                           openIndex === `support-${index}` ? "rotate-180" : ""
                         }`}
                       >
@@ -439,7 +439,7 @@ const FAQ = () => {
         </div>
       </section>
       {/* Still Have Questions */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600">
+      <section className="py-16 bg-[#FF6D3A]">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Still Have Questions?
@@ -451,7 +451,7 @@ const FAQ = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white hover:bg-gray-100 text-orange-600 px-8 py-4 rounded-xl font-semibold text-lg transition-colors inline-block"
+              className="bg-white hover:bg-gray-100 text-[#FF6D3A] px-8 py-4 rounded-xl font-semibold text-lg transition-colors inline-block"
             >
               Contact Support
             </a>
