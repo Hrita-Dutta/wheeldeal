@@ -7,8 +7,8 @@ async function seedAdmin() {
 
     await Admin.create({
       name: "Admin",
-      email: "admin@example.com",
-      password: "admin123",
+      email: process.env.ADMIN_MAIL,
+      password: process.env.ADMIN_PASS,
     });
 
     console.log("Admin seeded successfully");
