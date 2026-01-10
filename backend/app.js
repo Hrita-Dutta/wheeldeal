@@ -14,7 +14,6 @@ app.use(express.json());
 
 // All routes here
 app.use("/auth", authRoute);
-app.use("/admin", adminRoute);
 
 // Error route
 app.use((error, req, res, next) => {
