@@ -10,11 +10,11 @@ exports.register = async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(data.password, 10);
 
+    // Register customer
     if (accountType === "customer") {
       const customer = await db.Customer.create({
         ...data,
         password: hashedPassword,
-        // confirmPassword: hashedPassword,
       });
 
       return res.status(201).json({
@@ -23,11 +23,11 @@ exports.register = async (req, res) => {
       });
     }
 
+    // Register owner
     if (accountType === "owner") {
       const owner = await db.VehicleOwner.create({
         ...data,
         password: hashedPassword,
-        // confirmPassword: hashedPassword,
       });
 
       return res.status(201).json({
@@ -47,57 +47,67 @@ exports.register = async (req, res) => {
 };
 
 exports.login = async (req, res, next) => {
-  const email = req.body.email;
-  const password = req.body.password;
-  let loadedUser;
-  db.Customer.findOne({ where: { email: email } })
-    .then((user) => {
-      if (user) {
-        loadedUser = user;
-        accountType = "customer";
-        return bcrypt.compare(password, user.password);
-      }
+  try {
+    const { email, password } = req.body;
+    let user = null;
+    let accountType = null;
 
-      // If not found, check VehicleOwner table
-      return db.VehicleOwner.findOne({ where: { email: email } }).then(
-        (owner) => {
-          if (!owner) {
-            const error = new Error("User not found.");
-            error.statusCode = 401;
-            throw error;
-          }
-          loadedUser = owner;
-          accountType = "owner";
-          return bcrypt.compare(password, owner.password);
-        }
-      );
-    })
-    .then((isEqual) => {
-      if (!isEqual) {
-        const error = new Error("Wrong password!");
-        error.statusCode = 401;
-        throw error;
+    user = await db.Admin.findOne({ where: { email } });
+    if (user) {
+      accountType = "admin";
+    }
+
+    if (!user) {
+      user = await db.Customer.findOne({ where: { email } });
+      if (user) {
+        accountType = "customer";
       }
-      const token = jwt.sign(
-        {
-          email: loadedUser.email,
-          userId: loadedUser.id.toString(),
-          accountType: accountType,
-        },
-        process.env.SECRET,
-        { expiresIn: "1h" }
-      );
-      res.status(200).json({
-        token: token,
-        email: loadedUser.email,
-        userId: loadedUser.id.toString(),
+    }
+
+    // Check Vehicle Owner
+    if (!user) {
+      user = await db.VehicleOwner.findOne({ where: { email } });
+      if (user) {
+        accountType = "owner";
+      }
+    }
+
+    // User not found
+    if (!user) {
+      const error = new Error("User not found");
+      error.statusCode = 401;
+      throw error;
+    }
+
+    // Hased password compare
+    const isEqual = await bcrypt.compare(password, owner.password);
+    if (!isEqual) {
+      const error = new Error("Wrong assword");
+      error.statusCode = 401;
+      throw error;
+    }
+
+    // Token Generation
+    const token = jwt.sign(
+      {
+        email: user.email,
+        userId: user.id.toString(),
         accountType: accountType,
-      });
-    })
-    .catch((err) => {
-      if (!err.statusCode) {
-        err.statusCode = 500;
-      }
-      next(err);
+      },
+      process.env.SECRET,
+      { expiresIn: "1h" }
+    );
+
+    res.status(200).json({
+      token: token,
+      email: user.email,
+      userId: user.id.toString(),
+      accountType: accountType,
     });
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
 };
