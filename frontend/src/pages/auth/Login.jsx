@@ -10,7 +10,7 @@ const Login = () => {
     password: "",
   });
 
-  const navigate = useNavigate();
+  const nav = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,13 +27,21 @@ const Login = () => {
         ...formData,
       });
 
-      // SAVE TO LOCAL STORAGE
+      // Save to local storage
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("email", res.data.email);
       localStorage.setItem("userId", res.data.userId);
       localStorage.setItem("accountType", res.data.accountType);
       alert(res.data.message || "LoggedIn Successful!");
-      navigate("/");
+      nav("/");
+      // --------------Will be used in future accordingly-----------
+      // if (res.data.accountType === "admin") {
+      //   nav("/admin/dashboard");
+      // } else if (res.data.accountType === "customer") {
+      //   nav("/customer/dashboard");
+      // } else if (res.data.accountType === "owner") {
+      //   nav("/owner/dashboard");
+      // }
     } catch (err) {
       console.log(err);
       alert(err.response?.data?.message || "Login failed");
@@ -283,7 +291,7 @@ const Login = () => {
             <div className="text-center text-sm text-gray-600 mt-6">
               Don't have an account?{" "}
               <span
-                onClick={() => navigate("/register")}
+                onClick={() => nav("/register")}
                 className="text-orange-500 font-semibold cursor-pointer hover:underline"
               >
                 Sign Up
