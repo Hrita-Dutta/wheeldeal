@@ -1,8 +1,9 @@
+require("dotenv").config();
 const bcrypt = require("bcrypt");
 const db = require("../models");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
+// Register Logic
 exports.register = async (req, res) => {
   const { accountType, ...data } = req.body;
   // console.log("bug here");
@@ -46,17 +47,21 @@ exports.register = async (req, res) => {
   }
 };
 
+// Login Logic
 exports.login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     let user = null;
     let accountType = null;
 
+    // Check admin
     user = await db.Admin.findOne({ where: { email } });
     if (user) {
       accountType = "admin";
     }
+    console.log("user logged in");
 
+    // Check customer
     if (!user) {
       user = await db.Customer.findOne({ where: { email } });
       if (user) {
@@ -80,9 +85,9 @@ exports.login = async (req, res, next) => {
     }
 
     // Hased password compare
-    const isEqual = await bcrypt.compare(password, owner.password);
+    const isEqual = await bcrypt.compare(password, user.password);
     if (!isEqual) {
-      const error = new Error("Wrong assword");
+      const error = new Error("Wrong password");
       error.statusCode = 401;
       throw error;
     }
