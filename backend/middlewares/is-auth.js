@@ -1,5 +1,7 @@
 const jwt = require("jsonwebtoken");
+const { verifyAccessToken } = require("../services/token.service");
 
+// Give access to the user who are logged in with correct credential by verifying the aceess token
 module.exports = (req, res, next) => {
   const authHeader = req.get("Authorization");
   if (!authHeader) {
@@ -7,10 +9,10 @@ module.exports = (req, res, next) => {
     error.statusCode = 401;
     throw error;
   }
-  const token = req.get("Authorization").split(" ")[1];
+  const token = authHeader.split(" ")[1];
   let decodedToken;
   try {
-    decodedToken = jwt.verify(token, "secret");
+    decodedToken = verifyAccessToken(token);
   } catch (err) {
     err.statusCode = 500;
     throw err;
@@ -22,5 +24,10 @@ module.exports = (req, res, next) => {
   }
 
   req.userId = decodedToken.userId;
+  // req.user = {
+  //     userId: decodedToken.userId,
+  //     email: decodedToken.email,
+  //     accountType: decodedToken.accountType,
+  //   };
   next();
 };

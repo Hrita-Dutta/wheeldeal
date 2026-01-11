@@ -2,6 +2,11 @@ require("dotenv").config();
 const bcrypt = require("bcrypt");
 const db = require("../models");
 const jwt = require("jsonwebtoken");
+const {
+  generateAccessToken,
+  generateRefreshToken,
+  verifyRefreshToken,
+} = require("../services/token.service");
 
 // Register Logic
 exports.register = async (req, res) => {
@@ -92,27 +97,53 @@ exports.login = async (req, res, next) => {
       throw error;
     }
 
-    // Token Generation
-    const token = jwt.sign(
-      {
-        email: user.email,
-        userId: user.id.toString(),
-        accountType: accountType,
-      },
-      process.env.SECRET,
-      { expiresIn: "1h" }
-    );
+    // Generate Access and refresh token when user logs in
+    // Calling Access Token Generation
+    const accessToken = generateAccessToken({
+      ...user.dataValues, //dataValues are comming due to sequlize as it stores objects as property name dataValues
+      accountType,
+    });
 
+    // Calling Refresh Token Generation
+    const refreshToken = generateRefreshToken({
+      ...user.dataValues,
+      accountType,
+    });
+
+    // Send refresh token as HTTP-only cookie
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true, // JS cannot access it
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict", // CSRF protection
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    });
+
+    // Send access token in JSON
     res.status(200).json({
-      token: token,
+      accessToken, // renamed from 'token' for clarity
       email: user.email,
       userId: user.id.toString(),
-      accountType: accountType,
+      accountType,
     });
   } catch (err) {
     if (!err.statusCode) {
       err.statusCode = 500;
     }
     next(err);
+  }
+};
+
+// refresh token logic
+exports.refreshToken = (req, res) => {
+  const token = req.cookies.refreshToken;
+
+  if (!token) return res.status(401).json({ message: "Refresh token missing" });
+
+  try {
+    const decodedToken = verifyRefreshToken(token); // call service
+    const newAccessToken = generateAccessToken(decodedToken);
+    res.status(200).json({ accessToken: newAccessToken });
+  } catch (err) {
+    res.status(403).json({ message: err.message });
   }
 };
