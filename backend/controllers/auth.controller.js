@@ -120,7 +120,7 @@ exports.login = async (req, res, next) => {
 
     // Send access token in JSON
     res.status(200).json({
-      accessToken, // renamed from 'token' for clarity
+      token: accessToken,
       email: user.email,
       userId: user.id.toString(),
       accountType,
@@ -142,7 +142,7 @@ exports.refreshToken = (req, res) => {
   try {
     const decodedToken = verifyRefreshToken(token); // call service
     const newAccessToken = generateAccessToken(decodedToken);
-    res.status(200).json({ accessToken: newAccessToken });
+    res.status(200).json({ token: newAccessToken });
   } catch (err) {
     res.status(403).json({ message: err.message });
   }
