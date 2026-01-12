@@ -1,13 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import MainLayout from "./layouts/MainLayout";
+import MainLayout from "./components/layouts/MainLayout";
 import Home from "./pages/Home";
-import AuthLayout from "./layouts/AuthLayout";
+import AuthLayout from "./components/layouts/AuthLayout";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import FAQ from "./pages/FAQ";
+import DashboardLayout from "./components/layouts/DashboardLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 
 const App = () => {
   return (
@@ -25,6 +27,10 @@ const App = () => {
         <Route element={<AuthLayout />}>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
+        </Route>
+
+        <Route element={<DashboardLayout />}>
+          <Route path="admin/dashboard" element={<AdminDashboard />} />
         </Route>
       </Routes>
     </div>
