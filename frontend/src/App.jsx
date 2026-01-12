@@ -10,6 +10,8 @@ import ContactUs from "./pages/ContactUs";
 import FAQ from "./pages/FAQ";
 import DashboardLayout from "./components/layouts/DashboardLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import UsersManagement from "./pages/admin/UsersManagement";
+import UserDetails from "./pages/admin/UserDetails";
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
 
         <Route element={<DashboardLayout />}>
           <Route path="admin/dashboard" element={<AdminDashboard />} />
+          <Route path="admin/users" element={<UsersManagement />} />
+          <Route path="admin/users/:id" element={<UserDetails />} />
         </Route>
       </Routes>
     </div>

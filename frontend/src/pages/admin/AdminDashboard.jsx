@@ -1,11 +1,11 @@
 const AdminDashboard = () => {
   const stats = [
-    { icon: "👥", label: "Total Users", value: "2,250" },
-    { icon: "🚗", label: "Vehicles", value: "415" },
-    { icon: "🗓️", label: "Bookings", value: "1,090" },
-    { icon: "💰", label: "Earnings", value: "Rs. 12.4L" },
-    { icon: "⭐", label: "Reviews", value: "367" },
-    { icon: "🚩", label: "Reports", value: "6" },
+    { label: "Total Users", value: "2,250" },
+    { label: "Vehicles", value: "415" },
+    { label: "Bookings", value: "1,090" },
+    { label: "Earnings", value: "Rs. 12.4L" },
+    { label: "Reviews", value: "367" },
+    { label: "Reports", value: "6" },
   ];
 
   const users = [
@@ -93,7 +93,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="flex-1 p-8">
-      <h1 className="text-3xl font-bold text-slate-800 mb-8 italic">
+      <h1 className="text-3xl font-bold text-slate-800 mb-8 ">
         Dashboard Overview
       </h1>
 
@@ -117,7 +117,7 @@ const AdminDashboard = () => {
       {/* Recent Users and Bookings */}
       <div className="grid grid-cols-3 gap-6 mb-8">
         <div className="col-span-2 bg-white rounded-lg p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-800 mb-6 italic">
+          <h2 className="text-xl font-bold text-slate-800 mb-6 ">
             Recent Users
           </h2>
           <table className="w-full">
@@ -176,7 +176,7 @@ const AdminDashboard = () => {
         </div>
 
         <div className="bg-white rounded-lg p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-800 mb-6 italic">
+          <h2 className="text-xl font-bold text-slate-800 mb-6 ">
             Recent Bookings
           </h2>
           <table className="w-full">
@@ -219,7 +219,7 @@ const AdminDashboard = () => {
       {/* Platform Trends and Quick Actions */}
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-2 bg-white rounded-lg p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-800 mb-2 italic">
+          <h2 className="text-xl font-bold text-slate-800 mb-2 ">
             Platform Trends
           </h2>
           <p className="text-sm text-gray-500 mb-6">Monthly Bookings</p>
@@ -258,7 +258,7 @@ const AdminDashboard = () => {
         </div>
 
         <div className="bg-white rounded-lg p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-800 mb-6 italic">
+          <h2 className="text-xl font-bold text-slate-800 mb-6 ">
             Quick Actions
           </h2>
           <div className="grid grid-cols-2 gap-3">
