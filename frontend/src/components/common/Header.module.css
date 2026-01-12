@@ -4,14 +4,15 @@
 }
 
 .navLink:hover {
-    font-weight: 600;
+    /* font-weight: 600; */
+    color: #23282f;
 }
 
 .activeLink {
     background-color: #FFF7ED;
     color: #FF6D3A;
     font-style: italic;
-    font-weight: 800;
+    font-weight: 600;
     padding: 9px 18px;
     border-radius: 10px;
 
