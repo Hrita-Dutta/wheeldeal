@@ -1,6 +1,13 @@
 import React, { useState } from "react";
+import Banner from "../components/widgets/Banner";
+import FollowUs from "../components/common/FollowUs";
 
 const ContactUs = () => {
+  const subTitle = "GET IN TOUCH";
+  const title = "We'd Love to Hear From You";
+  const descirption =
+    "Have questions? We're here to help! Reach out to us anytime.";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,24 +31,13 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      {/* Hero Section */}
-      <section className="bg-[#1E3A5F] text-white py-20 flex justify-center px-4">
-        <div className="w-full lg:w-295 px-6">
-          <span className="font-bold text-[#FF6D3A]  text-sm">
-            GET IN TOUCH{" "}
-          </span>
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 w-full lg:w-[36%] ">
-            We'd Love to Hear From You{" "}
-          </h1>
-          <p className="text-[#94A3B8] max-w-3xl">
-            Have questions? We're here to help! Reach out to us anytime.
-          </p>
-        </div>
-      </section>
+      {/* Banner Section */}
+
+      <Banner title={title} subTitle={subTitle} description={descirption} />
 
       {/* Main Content */}
       <section className="py-10 flex justify-center px-4">
-        <div className="w-full lg:w-295 px-6">
+        <div className="w-full lg:container px-6">
           <div className="">
             {/* Contact Information Cards */}
             <div className="lg:col-span-1 flex flex-col lg:flex-row justify-between items-baseline py-6 gap-6">
@@ -329,17 +325,17 @@ const ContactUs = () => {
       {/* Map Section */}
       <section className="py-8 px-4">
         <div className="flex flex-col items-center gap-5">
-          <h3 className="font-bold  text-3xl text-[#1E3A5F]">Find Us Here</h3>
-          <div className="w-full lg:w-295 border-2 border-[#E2E8F0] rounded-2xl">
+          <h3 className="font-bold  text-4xl text-[#1E3A5F]">Find Us Here</h3>
+          <div className="w-full lg:container border-2 border-[#E2E8F0] rounded-2xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0676609965287!2d87.69476107495565!3d26.663334676802573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef41f2b5f7f2c3%3A0xd5a7d7f98aaf07db!2sDamak%20Jaycees%20Chowk!5e0!3m2!1sen!2snp!4v1694500000000!5m2!1sen!2snp"
               width="100%"
-              height="400"
-              style={{ border: "0" }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Google Maps"
+              height="560"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=islington+college&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
               className="rounded-2xl"
             ></iframe>
           </div>
@@ -387,37 +383,7 @@ const ContactUs = () => {
       </section>
 
       {/* Social Media */}
-      <section className="flex justify-center py-10 px-4">
-        <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 w-full lg:w-295">
-          <h3 className="text-3xl font-bold text-blue-900 mb-4 ">Follow Us</h3>
-          <div className="flex gap-3">
-            <a
-              href="#"
-              className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white text-xl transition-colors"
-            >
-              f
-            </a>
-            <a
-              href="#"
-              className="w-12 h-12 bg-gray-800 hover:bg-gray-900 rounded-full flex items-center justify-center text-white text-xl transition-colors"
-            >
-              𝕏
-            </a>
-            <a
-              href="#"
-              className="w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center text-white text-xl transition-colors"
-            >
-              in
-            </a>
-            <a
-              href="#"
-              className="w-12 h-12 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center text-white text-xl transition-colors"
-            >
-              📷
-            </a>
-          </div>
-        </div>
-      </section>
+      <FollowUs />
     </div>
   );
 };

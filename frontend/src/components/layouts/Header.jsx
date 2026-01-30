@@ -109,6 +109,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      <hr className="border-[#ebebeb] w-6xl mx-auto" />
 
       {/* Mobile Menu */}
       <div

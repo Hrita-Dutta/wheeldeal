@@ -4,7 +4,7 @@ const How = () => {
   return (
     <>
       <section className="bg-[#F8FAFC] flex justify-center py-15 px-4">
-        <div className="w-full lg:w-295 flex flex-col gap-10">
+        <div className="w-full lg:container flex flex-col gap-10">
           <div className="flex flex-col items-center gap-2">
             <span className="text-[#FF6D3A] uppercase font-semibold ">
               Simple Process
@@ -15,7 +15,7 @@ const How = () => {
             </p>
           </div>
           {/* Steps Div */}
-          <div className="flex flex-col lg:flex-row items-center gap-6">
+          <div className="flex flex-col lg:flex-row items-center justify-center ">
             {/* Step 1 */}
             <div className="border border-solid border-[#E2E8F0] w-full lg:w-fit bg-white py-5 px-8 lg:px-18 rounded-2xl">
               <div className="flex flex-col items-center w-full lg:w-50 gap-3">
@@ -32,7 +32,7 @@ const How = () => {
             </div>
 
             {/* border dashed */}
-            <div className="hidden lg:block border-dashed border-t-3 border-[#E2E8F0] w-15"></div>
+            <div className="hidden lg:block border-dashed border-t-3 border-[#E2E8F0] w-21"></div>
 
             {/* Step 2 */}
             <div className="border border-solid border-[#E2E8F0] w-full lg:w-fit bg-white py-5 px-8 lg:px-18 rounded-2xl">
@@ -47,7 +47,7 @@ const How = () => {
               </div>
             </div>
             {/* border dashed */}
-            <div className="hidden lg:block border-dashed border-t-3 border-[#E2E8F0] w-15"></div>
+            <div className="hidden lg:block border-dashed border-t-3 border-[#E2E8F0] w-21"></div>
 
             {/* Step 3 */}
             <div className="border border-solid border-[#E2E8F0] w-full lg:w-fit bg-white py-5 px-8 lg:px-18 rounded-2xl">

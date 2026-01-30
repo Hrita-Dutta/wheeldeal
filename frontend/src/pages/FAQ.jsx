@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import Banner from "../components/widgets/Banner";
 
 const FAQ = () => {
+  const title = "Frequently Asked Questions";
+  const description = "Find quick answers to common questions about WheelDeal";
+
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -160,16 +164,8 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-[#1E3A5F] text-white py-20 flex justify-center">
-        <div className="w-295  px-6 ">
-          <h1 className="text-5xl font-bold mb-4">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-lg text-[#94A3B8] max-w-3xl ">
-            Find quick answers to common questions about WheelDeal
-          </p>
-        </div>
-      </section>
+      <Banner title={title} description={description} />
+
       {/* Search Bar */}
       {/* <section className="py-8 bg-white shadow-sm">
         <div className="container mx-auto px-6">

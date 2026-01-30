@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../common/Header";
-import Footer from "../common/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
-import { Sidebar } from "lucide-react";
-import DynamicSidebar from "../common/sidebar/DynamicSidebar";
+// import { Sidebar } from "lucide-react";
+import DynamicSidebar from "./sidebar/DynamicSidebar";
 
 const DashboardLayout = () => {
   return (

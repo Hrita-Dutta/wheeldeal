@@ -5,7 +5,7 @@ const BrowseCategory = () => {
   return (
     <>
       <section className="flex justify-center py-15 px-4">
-        <div className="w-full lg:w-295">
+        <div className="w-full lg:container">
           <div className="pb-8 flex flex-col gap-2">
             <span className="text-[#FF6D3A] uppercase font-semibold ">
               Explore

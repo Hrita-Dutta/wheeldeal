@@ -1,10 +1,11 @@
 import carImg1 from "../../../public/car/test2.jpg";
+import VehicleCard from "../widgets/VehicleCard";
 
 const FeaturedVechicles = () => {
   return (
     <>
       <section className="flex justify-center py-10 px-4">
-        <div className="w-full lg:w-295">
+        <div className="w-full lg:container">
           {/* Top Section */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-8 gap-4">
             <div>
@@ -25,96 +26,12 @@ const FeaturedVechicles = () => {
             </div>
           </div>
           {/* Another Section */}
-          <div className="flex flex-wrap justify-center gap-7">
-            <div className="border border-[#E2E8F0] w-fit rounded-2xl p-4 flex flex-col">
-              <img
-                src={carImg1}
-                alt=""
-                width={240}
-                className="border rounded-2xl"
-              />
-              <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold  text-xl text-[#1E3A5F]">
-                  Toyota Land Cruiser
-                </span>
-                <p className="text-sm text-[#94A3B8]">2022 Model</p>
-                <span className="text-[#1E3A5F]">Rating</span>
-                <hr className="border-[#E2E8F0]" />
-                <span className=" text-2xl font-bold text-[#1E3A5F]">
-                  NPR Price
-                </span>
-              </div>
-              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
-                View Details
-              </button>
-            </div>
+          <div className="flex flex-wrap  justify-between gap-5">
             {/* replicas */}
-            <div className="border border-[#E2E8F0] w-fit rounded-2xl p-4 flex flex-col">
-              <img
-                src={carImg1}
-                alt=""
-                width={240}
-                className="border rounded-2xl"
-              />
-              <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold  text-xl text-[#1E3A5F]">
-                  Toyota Land Cruiser
-                </span>
-                <p className="text-sm text-[#94A3B8]">2022 Model</p>
-                <span className="text-[#1E3A5F]">Rating</span>
-                <hr className="border-[#E2E8F0]" />
-                <span className=" text-2xl font-bold text-[#1E3A5F]">
-                  NPR Price
-                </span>
-              </div>
-              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
-                View Details
-              </button>
-            </div>
-            <div className="border border-[#E2E8F0] w-fit rounded-2xl p-4 flex flex-col">
-              <img
-                src={carImg1}
-                alt=""
-                width={240}
-                className="border rounded-2xl"
-              />
-              <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold  text-xl text-[#1E3A5F]">
-                  Toyota Land Cruiser
-                </span>
-                <p className="text-sm text-[#94A3B8]">2022 Model</p>
-                <span className="text-[#1E3A5F]">Rating</span>
-                <hr className="border-[#E2E8F0]" />
-                <span className=" text-2xl font-bold text-[#1E3A5F]">
-                  NPR Price
-                </span>
-              </div>
-              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
-                View Details
-              </button>
-            </div>
-            <div className="border border-[#E2E8F0] w-fit rounded-2xl p-4 flex flex-col">
-              <img
-                src={carImg1}
-                alt=""
-                width={240}
-                className="border rounded-2xl"
-              />
-              <div className="flex flex-col gap-1 p-3">
-                <span className="font-bold  text-xl text-[#1E3A5F]">
-                  Toyota Land Cruiser
-                </span>
-                <p className="text-sm text-[#94A3B8]">2022 Model</p>
-                <span className="text-[#1E3A5F]">Rating</span>
-                <hr className="border-[#E2E8F0]" />
-                <span className=" text-2xl font-bold text-[#1E3A5F]">
-                  NPR Price
-                </span>
-              </div>
-              <button className="border bg-[#1E3A5F]  font-bold text-white py-3 rounded-xl hover:bg-white hover:text-[#1E3A5F] hover:bg-border-[#1E3A5F] transition duration-450 ease-in-out">
-                View Details
-              </button>
-            </div>
+            <VehicleCard />
+            <VehicleCard />
+            <VehicleCard />
+            <VehicleCard />
           </div>
         </div>
       </section>
