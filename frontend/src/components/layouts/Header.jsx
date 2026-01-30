@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       <nav className="flex justify-center px-4">
-        <div className="w-full lg:w-295 flex justify-between items-center py-5">
+        <div className="w-full lg:container flex justify-between items-center py-5">
           <div>
             <img src={logo} alt="" width={150} />
           </div>

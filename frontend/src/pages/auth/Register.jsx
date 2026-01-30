@@ -20,7 +20,7 @@ const Register = () => {
       .required("Confirm password is required"),
     agreeTerms: Yup.boolean().oneOf(
       [true],
-      "You must accept Terms & Privacy Policy"
+      "You must accept Terms & Privacy Policy",
     ),
     licenseNumber: Yup.string().when("accountType", {
       is: "owner",
@@ -135,12 +135,12 @@ const Register = () => {
           }}
           validationSchema={validationSchema}
           onSubmit={async (values, { setSubmitting }) => {
-            // alert("FORM SUBMITTED ✅"); // now works
+            // alert("FORM SUBMITTED"); // now works
 
             try {
               const res = await axios.post(
                 "http://localhost:8080/auth/register",
-                values
+                values,
               );
               alert(res.data.message || "Account created");
               navigate("/login");
